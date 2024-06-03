@@ -18,6 +18,10 @@ fclean:
 	rm -rf ./data
 	docker compose --env-file ./env/.env -f ./compose.yaml down --rmi all --volumes
 
+clean:
+	make down
+	docker rmi -f pinting/gateway:1.0.0
+
 re:
 	make fclean
 	make build
