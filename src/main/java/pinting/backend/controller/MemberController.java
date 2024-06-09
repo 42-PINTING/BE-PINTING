@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import pinting.backend.entity.Member;
-import pinting.backend.dto.MemberDto;
+import pinting.backend.controller.dto.MemberDto;
 import pinting.backend.service.MemberService;
 
 import java.util.List;

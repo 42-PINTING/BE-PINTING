@@ -1,4 +1,4 @@
-package pinting.backend.OAuth2.jwt;
+package pinting.backend.common.oauth2.jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -9,8 +9,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
-import pinting.backend.dto.OAuth2.CustomOAuth2User;
-import pinting.backend.dto.OAuth2.UserDto;
+import pinting.backend.controller.dto.oauth2.CustomOAuth2User;
+import pinting.backend.controller.dto.oauth2.UserDto;
 
 import java.io.IOException;
 

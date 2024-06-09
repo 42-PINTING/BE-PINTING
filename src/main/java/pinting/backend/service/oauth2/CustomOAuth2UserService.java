@@ -1,4 +1,4 @@
-package pinting.backend.service.OAuth2;
+package pinting.backend.service.oauth2;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,14 +6,12 @@ import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserServ
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
-import org.springframework.stereotype.Service;
-import pinting.backend.dto.OAuth2.CustomOAuth2User;
-import pinting.backend.dto.OAuth2.GoogleResponse;
-import pinting.backend.dto.OAuth2.OAuth2Response;
-import pinting.backend.dto.OAuth2.UserDto;
-import pinting.backend.entity.OAuth2.UserEntity;
-import pinting.backend.repository.OAuth2.JpaUserRepository;
-import pinting.backend.repository.OAuth2.UserRepository;
+import pinting.backend.controller.dto.oauth2.CustomOAuth2User;
+import pinting.backend.controller.dto.oauth2.GoogleResponse;
+import pinting.backend.controller.dto.oauth2.OAuth2Response;
+import pinting.backend.controller.dto.oauth2.UserDto;
+import pinting.backend.entity.oauth2.UserEntity;
+import pinting.backend.repository.oauth2.UserRepository;
 
 @Transactional
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {

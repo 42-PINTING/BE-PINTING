@@ -1,4 +1,4 @@
-package pinting.backend.entity.OAuth2;
+package pinting.backend.entity.oauth2;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package pinting.backend.dto;
+package pinting.backend.controller.dto;
 
 public class MemberDto {
 	private String name;
