@@ -1,4 +1,4 @@
-package pinting.backend.OAuth2.handler;
+package pinting.backend.common.oauth2.handler;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
@@ -8,8 +8,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-import pinting.backend.dto.OAuth2.CustomOAuth2User;
-import pinting.backend.OAuth2.jwt.JWTUtil;
+import pinting.backend.controller.dto.oauth2.CustomOAuth2User;
+import pinting.backend.common.oauth2.jwt.JWTUtil;
 
 import java.io.IOException;
 import java.util.Collection;

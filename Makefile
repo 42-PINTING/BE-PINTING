@@ -23,8 +23,7 @@ clean:
 	docker rmi -f pinting/gateway:1.0.0
 
 re:
-	make fclean
-	make build
+	make clean
 	make up
 
 env_update:
