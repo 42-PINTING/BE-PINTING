@@ -1,4 +1,4 @@
-package pinting.backend.dto.OAuth2;
+package pinting.backend.controller.dto.oauth2;
 
 public interface OAuth2Response {
 

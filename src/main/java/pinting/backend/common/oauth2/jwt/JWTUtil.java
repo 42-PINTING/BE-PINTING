@@ -1,4 +1,4 @@
-package pinting.backend.OAuth2.jwt;
+package pinting.backend.common.oauth2.jwt;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Value;

@@ -9,21 +9,18 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import pinting.backend.OAuth2.handler.CustomSuccessHandler;
-import pinting.backend.OAuth2.jwt.JWTFilter;
-import pinting.backend.OAuth2.jwt.JWTUtil;
-import pinting.backend.repository.JpaMemberRepository;
-import pinting.backend.repository.MemberRepository;
-import pinting.backend.repository.OAuth2.JpaUserRepository;
-import pinting.backend.repository.OAuth2.UserRepository;
-import pinting.backend.service.MemberService;
-import pinting.backend.service.OAuth2.CustomOAuth2UserService;
+import pinting.backend.common.oauth2.handler.CustomSuccessHandler;
+import pinting.backend.common.oauth2.jwt.JWTFilter;
+import pinting.backend.common.oauth2.jwt.JWTUtil;
+import pinting.backend.repository.oauth2.JpaUserRepository;
+import pinting.backend.repository.oauth2.UserRepository;
+import pinting.backend.service.oauth2.CustomOAuth2UserService;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-	EntityManager em;
+	private final EntityManager em;
 
 	private final CustomSuccessHandler customSuccessHandler;
 	private final JWTUtil jwtUtil;
@@ -65,7 +62,6 @@ public class SecurityConfig {
 		http
 				.authorizeHttpRequests((auth) -> auth
 						.requestMatchers("/").permitAll()
-//							.anyRequest().permitAll());
 						.anyRequest().authenticated());
 
 		//세션 설정 : STATELESS
@@ -76,20 +72,9 @@ public class SecurityConfig {
 		return http.build();
 	}
 
-
-	@Bean
-	public MemberService memberService() {
-		return new MemberService(memberRepository());
-	}
-
 	@Bean
 	public CustomOAuth2UserService customOAuth2UserService() {
 		return new CustomOAuth2UserService(userRepository());
-	}
-
-	@Bean
-	public MemberRepository memberRepository() {
-		return new JpaMemberRepository(em);
 	}
 
 	@Bean

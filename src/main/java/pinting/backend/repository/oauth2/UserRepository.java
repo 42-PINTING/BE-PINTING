@@ -1,6 +1,6 @@
-package pinting.backend.repository.OAuth2;
+package pinting.backend.repository.oauth2;
 
-import pinting.backend.entity.OAuth2.UserEntity;
+import pinting.backend.entity.oauth2.UserEntity;
 
 import java.util.List;
 import java.util.Optional;

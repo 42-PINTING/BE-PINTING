@@ -12,20 +12,20 @@ import pinting.backend.service.MemberService;
 @Configuration
 public class SpringConfig {
 
-//	EntityManager em;
-//
-//	@Autowired
-//	public SpringConfig(EntityManager em) {
-//		this.em = em;
-//	}
-//
-//	@Bean
-//	public MemberService memberService() {
-//		return new MemberService(memberRepository());
-//	}
-//
-//	@Bean
-//	public MemberRepository memberRepository() {
-//		return new JpaMemberRepository(em);
-//	}
+	private final EntityManager em;
+
+	@Autowired
+	public SpringConfig(EntityManager em) {
+		this.em = em;
+	}
+
+	@Bean
+	public MemberService memberService() {
+		return new MemberService(memberRepository());
+	}
+
+	@Bean
+	public MemberRepository memberRepository() {
+		return new JpaMemberRepository(em);
+	}
 }

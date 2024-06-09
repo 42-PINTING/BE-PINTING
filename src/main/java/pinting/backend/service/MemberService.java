@@ -2,6 +2,8 @@ package pinting.backend.service;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import pinting.backend.config.SecurityConfig;
 import pinting.backend.entity.Member;
 import pinting.backend.repository.MemberRepository;
 

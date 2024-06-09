@@ -1,4 +1,4 @@
-package pinting.backend.dto.OAuth2;
+package pinting.backend.controller.dto.oauth2;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.core.user.OAuth2User;
